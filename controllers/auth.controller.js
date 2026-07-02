@@ -5,24 +5,6 @@ import generateToken from "../utils/generateToken.js";
 
 
 // 1) REGISTER
-// export const register = async (req, res) => {
-//   const { name, email, password } = req.body;
-
-//   if (!name || !email || !password)
-//     return res.status(400).json({ msg: "All fields required" });
-
-//   const exists = await User.findOne({ email });
-//   if (exists) return res.status(400).json({ msg: "User already exists" });
-
-//   const hashed = await bcrypt.hash(password, 10);
-
-//   const user = await User.create({ name, email, password: hashed });
-
-//   res.json({
-//     token: generateToken(user),
-//     user
-//   });
-// };
 
 export const register = async (req, res) => {
   const { name, email, password } = req.body;
